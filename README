@@ -1,0 +1,6 @@
+C for Arduino
+
+A short C program to make an Arduino LED blink.
+You must compile using gcc-avr and upload using avrdude.
+
+nf
