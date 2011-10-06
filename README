@@ -3,4 +3,13 @@ C for Arduino
 A short C program to make an Arduino LED blink.
 You must compile using gcc-avr and upload using avrdude.
 
-nf
+Instructions:
+generate the hex file:
+avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o blink.o blink.c
+avr-gcc -mmcu=atmega328p blink.o -o blink
+avr-objcopy -O ihex -R .eeprom blink blink.hex
+
+flashing the Arduino:
+avrdude -V -F -C /etc/avrdude/avrdude.conf -p atmega328p -P /dev/ttyUSB0 -c stk500v1 -b 57600 -U flash:w:blink.hex
+
+-nf
