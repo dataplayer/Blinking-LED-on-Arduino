@@ -12,4 +12,4 @@ avr-objcopy -O ihex -R .eeprom blink blink.hex
 flashing the Arduino:
 avrdude -V -F -C /etc/avrdude/avrdude.conf -p atmega328p -P /dev/ttyUSB0 -c stk500v1 -b 57600 -U flash:w:blink.hex
 
--nf
+source: http://balau82.wordpress.com/2011/03/29/programming-arduino-uno-in-pure-c/
