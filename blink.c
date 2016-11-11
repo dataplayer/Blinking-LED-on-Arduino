@@ -11,12 +11,12 @@ int main (void)
       /* set PORTB.6 high */
       PORTB = 0x20;
 
-      _delay_ms(1000);
+      _delay_ms(2000);
 
       /* set PORTB.6 low */
       PORTB = 0x00;
 
-      _delay_ms(1000);
+      _delay_ms(2000);
     }
 
   return 1;
